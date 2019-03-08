@@ -17,9 +17,9 @@ axios
 ## 快速使用
 点击右上方的登陆图标，绑定 GitHub 信息。
 
-####用户名
+#### 用户名
 用户名为 GitHub 的用户名。
 
-####用户名
+#### Token
 在 GitHub > Settings > Developer Settings > Personal access tokens 勾选 gist 权限获取 Token。
 
