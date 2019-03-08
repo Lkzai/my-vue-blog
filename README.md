@@ -8,7 +8,7 @@
 本项目利用 GitHub Gist 作为数据库，搭建了一个纯前端可远程保存数据的单页面应用博客。
 ## 线上地址
 https://lkkkkkkg.github.io/lk.my-vue-blog.io/
-##技术栈
+## 技术栈
 vue <br>
 vuex <br>
 vue-router <br>
