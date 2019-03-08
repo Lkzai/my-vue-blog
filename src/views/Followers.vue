@@ -72,6 +72,7 @@
         .followers {
             position: relative;
 
+            @include border(top,rgba(0,0,0,.2));
             .followers-item {
                 position: relative;
                 display: flex;

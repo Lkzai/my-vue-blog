@@ -6,7 +6,7 @@
                     <p class="read-big-title">个人博客</p>
                     <div class="read-rely">
                         <svg class="read-icon" width="70" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h31v20H0z"/><path fill="#4c1" d="M31 0h39v20H31z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="165" y="140" transform="scale(.1)" textLength="210">vue</text><text x="495" y="140" transform="scale(.1)" textLength="290">2.6.6</text></g> </svg>
-                        <svg class="read-icon" width="70" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h31v20H0z"/><path fill="#4c1" d="M31 0h39v20H31z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="165" y="140" transform="scale(.1)" textLength="210">vue</text><text x="495" y="140" transform="scale(.1)" textLength="290">2.6.6</text></g> </svg>
+                        <svg class="read-icon" width="70" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h31v20H0z"/><path fill="#4c1" d="M31 0h39v20H31z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="165" y="140" transform="scale(.1)" textLength="210">vuex</text><text x="495" y="140" transform="scale(.1)" textLength="290">2.6.6</text></g> </svg>
                         <svg class="read-icon" width="108" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h69v20H0z"/><path fill="#4c1" d="M69 0h39v20H69z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="355" y="140" transform="scale(.1)" textLength="590">vue-router</text><text x="875" y="140" transform="scale(.1)" textLength="290">3.0.1</text></g> </svg>
                         <svg class="read-icon" width="84" height="20"><g shape-rendering="crispEdges"><path fill="#555" d="M0 0h39v20H0z"/><path fill="#fe7d37" d="M39 0h45v20H39z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="205" y="140" transform="scale(.1)" textLength="290">axios</text><text x="605" y="140" transform="scale(.1)" textLength="350">0.18.0</text></g> </svg>
                     </div>
@@ -17,7 +17,7 @@
                             介绍
                         </div>
                         <div class="read-detail">
-                            本博客利用 GitHub Gist 作为数据的存储，目前实现了查看博客，发表博客功能。
+                            本项目利用 GitHub Gist 作为数据库，搭建了一个纯前端可远程保存数据的单页面应用博客。
                         </div>
                     </div>
                     <div class="read-main-item">

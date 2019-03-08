@@ -70,6 +70,7 @@
         .following {
             position: relative;
 
+            @include border(top,rgba(0,0,0,.2));
             .following-item {
                 position: relative;
                 display: flex;

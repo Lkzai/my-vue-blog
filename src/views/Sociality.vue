@@ -39,7 +39,6 @@
                 display: flex;
                 margin: 15px 0;
                 padding: 0 15px;
-                @include border(top,rgba(0,0,0,.2));
                 .sociality-nav-item {
                     position: relative;
                     flex: 1;
