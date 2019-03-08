@@ -1,0 +1,79 @@
+@mixin border($pos,$color) {
+  @if $pos == bottom {
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      content: '';
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      background-color: $color;
+    }
+  }
+  @if $pos == top {
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: auto;
+      right: auto;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      content: '';
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      background-color: $color;
+    }
+  }
+  @if $pos == right {
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      display: block;
+      width: 1px;
+      height: 100%;
+      content: '';
+      -webkit-transform: scaleX(.5);
+      transform: scaleX(.5);
+      -webkit-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
+      background-color: $color;
+    }
+  }
+  @if$pos == both {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200%;
+      height: 200%;
+      border: 1px solid $color;
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scale(.5);
+      -ms-transform: scale(.5);
+      transform: scale(.5);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+  }
+}
