@@ -81,8 +81,8 @@
         usernamePlaceholder: '请输入GitHub用户名',
         passwordLabel: 'Token',
         passwordPlaceholder: '请输入有效Token',
-        usernameValue: 'Lkkkkkkg',
-        tokenValue: 'dfdcba752517bb6fa094136cb1f2bf0c1e251c7c'
+        usernameValue: '',
+        tokenValue: ''
       }
     },
     methods: {
