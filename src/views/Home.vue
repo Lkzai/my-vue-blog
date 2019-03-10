@@ -2,9 +2,8 @@
     <main class="main">
         <div class="home-wrap" ref="homeWrapRef" @scroll="onScroll">
             <div class="home" ref="homeRef">
-                <loading v-if="loading"></loading>
                 <transition name="fade">
-                    <div class="home-tips" v-if="!loading && $store.state.blogs.length === 0">
+                    <div class="home-tips" v-if="!loading && this.$store.state.blogs.length === 0">
                         <p class="home-tips-text">点击发表博客</p>
                         <svg class="home-tips-icon" slot="header">
                             <use xlink:href="#icon-arraw"></use>
@@ -48,7 +47,6 @@
 
 <script>
   import Card from '../components/Card'
-  import Loading from '../components/Loading'
   import Dialog from '../components/Dialog'
   import Input from '../components/Input'
   import Textarea from '../components/Textarea'
@@ -57,7 +55,6 @@
     name: 'home',
     components: {
       'card': Card,
-      'loading': Loading,
       'my-dialog': Dialog,
       'my-input': Input,
       'my-textarea': Textarea
@@ -76,7 +73,7 @@
         detailPlaceholder: '请输入内容',
         addDialogConfirmText: '发表',
         deleteDialogShow: false,
-        currentId: ''
+        currentId: '',
       }
     },
     created() {
@@ -142,14 +139,16 @@
         })
       },
       getBlogs() {
-        this.loading = true;
-        //加个时间戳防止发表博客后刷新页面使用了缓存
+          this.$tips('正在加载', 'loading');
+          this.loading = true;
+          //加个时间戳防止发表博客后刷新页面使用了缓存
         this.$ajax.get(`https://api.github.com/users/${this.$store.state.user.login}/gists?time=${new Date().getTime()}`).then((res) => {
-          this.$store.commit('SET_BLOGS', res.data)
-          this.loading = false;
+            this.$store.commit('SET_BLOGS', res.data);
+            this.loading = false;
+            this.$tips('加载成功', 'correct', 2000);
         }).catch(() => {
-          this.$tips('请求失败', 'wrong', 2000);
-          this.loading = false;
+            this.loading = false;
+            this.$tips('加载失败', 'wrong', 2000);
         })
       },
       beforeEditDialogClose(action, done) {

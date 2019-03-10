@@ -132,6 +132,9 @@
                     flex: 1;
 
                     font-size: 16px;
+                    &:active {
+                         background-color: #eee;
+                     }
                 }
                 .dialog-action-cancel {
                     position: relative;

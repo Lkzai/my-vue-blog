@@ -2,9 +2,7 @@
     <div id="app">
         <header class="header">
             <router-link class="header-left" to="/">
-                <svg class="header-left-icon">
-                    <use xlink:href="#icon-dog"></use>
-                </svg>
+                ByLk
             </router-link>
             <div class="header-right">
                 <svg @click="loginDialogShow = true" v-if="JSON.stringify(this.$store.state.user)==='{}'" width="100%"
@@ -83,8 +81,8 @@
         usernamePlaceholder: '请输入GitHub用户名',
         passwordLabel: 'Token',
         passwordPlaceholder: '请输入有效Token',
-        usernameValue: '',
-        tokenValue: ''
+        usernameValue: 'Lkkkkkkg',
+        tokenValue: 'dfdcba752517bb6fa094136cb1f2bf0c1e251c7c'
       }
     },
     methods: {
@@ -153,18 +151,8 @@
             @include border(bottom, rgba(0, 0, 0, .2));
 
             .header-left {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                font-size: 0;
-
-                .header-left-icon {
-                    width: 30px;
-                    height: 30px;
-
-                    fill: rgba(0, 0, 0, 0.54);
-                }
+                font-size: 25px;
+                color: #000;
             }
 
             .header-right {

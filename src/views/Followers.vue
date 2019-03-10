@@ -27,18 +27,18 @@
     },
     methods: {
       getFollowers() {
-        this.$tips('正在请求', 'loading');
+        this.$tips('正在加载', 'loading');
         this.$ajax.get(`https://api.github.com/users/${this.$store.state.user.login}/followers?time=${new Date().getTime()}`).then((res) => {
           res.data.forEach((item)=>{
             this.$ajax.get(item.url).then((res)=>{
               this.$store.commit('SET_FOLLOWERS',res.data);
-                this.$tips('请求成功', 'correct', 2000);
+                this.$tips('加载成功', 'correct', 2000);
             }).catch(()=>{
-              this.$tips('请求失败', 'wrong', 2000);
+              this.$tips('加载失败', 'wrong', 2000);
             })
           })
         }).catch(()=>{
-          this.$tips('请求失败', 'wrong', 2000);
+          this.$tips('加载失败', 'wrong', 2000);
         })
       }
     },
@@ -77,14 +77,15 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                margin-left: 15px;
-                padding: 15px 0;
-                @include border(bottom,rgba(0,0,0,.2));
+                padding-left: 15px;
+                    &:active {
+                     background-color: #eee;
+                    }
                 .follower-item-left {
                     width: 50px;
                     height: 50px;
 
-                    margin-right: 15px;
+                    margin: 15px 15px 15px 0;
 
                     border-radius: 50%;
                     border: 1px solid $border-color;
@@ -95,6 +96,10 @@
                     }
                 }
                 .followers-item-right {
+                    position: relative;
+                    flex: 1;
+                    padding: 15px 0;
+                    @include border(bottom,rgba(0,0,0,.2));
                    .followers-bio {
                        margin-top: 2px;
                        color: #999;

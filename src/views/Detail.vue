@@ -32,18 +32,18 @@
     },
     methods: {
       getBlog() {
-        this.$tips('正在请求', 'loading');
+        this.$tips('正在加载', 'loading');
         this.$ajax.get(`https://api.github.com/gists/${this.$route.query.id}?time=${new Date().getTime()}`).then((res) => {
           this.$store.commit('SET_DETAILS', {
             key: this.$route.query.id,
             value: res.data
           })
-          this.$tips('请求成功', 'correct', 2000);
+          this.$tips('加载成功', 'correct', 2000);
           this.$nextTick(function () {
             this.$refs.detailRef.scrollTop = this.$store.state.scrollTops[this.$route.query.id]
           })
         }).catch(()=>{
-          this.$tips('请求失败', 'wrong', 2000);
+          this.$tips('加载失败', 'wrong', 2000);
         })
       }
     },

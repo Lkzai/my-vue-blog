@@ -61,10 +61,10 @@
         padding: 15px 15px 12px;
 
         @include border(bottom,rgba(0,0,0,.2));
-
-        &:last-child {
-         @include border(bottom,transparent);
+        &:active {
+             background-color: #eee;
          }
+
         .card-header {
             display: flex;
             align-items: center;

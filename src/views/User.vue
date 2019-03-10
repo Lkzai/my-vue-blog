@@ -143,7 +143,6 @@
                 position: relative;
 
                 margin-top: 15px;
-                padding-left: 11px;
 
                 @include border(top,rgba(0,0,0,.2));
                 @include border(bottom,rgba(0,0,0,.2));
@@ -151,9 +150,16 @@
                     display: flex;
                     align-items: center;
 
+                    padding-left: 11px;
+
+
                     height: 50px;
 
                     color: #444;
+                
+                    &:active {
+                         background-color: #eee;
+                     }
 
                     &:last-child {
                         .user-main-item-content {

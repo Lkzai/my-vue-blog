@@ -34,7 +34,8 @@ export default new Vuex.Store({
         if(blog.id === value) {
           state.blogs.splice(index,1);
         }
-      })
+      });
+      state.user.public_gists--;
     },
     SET_DETAILS(state, value) {
       Vue.set(state.details, value.key, value.value)
