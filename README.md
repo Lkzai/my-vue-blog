@@ -8,7 +8,7 @@
 本项目利用 GitHub Gist 作为数据库，搭建了一个基于Vue纯前端却可保存数据的移动端个人博客。
 
 ## 效果
-![](https://img-blog.csdnimg.cn/2019031117250588.gif)
+![](https://img-blog.csdnimg.cn/20190311174058605.gif)
 
 ## 线上地址
 https://lkkkkkkg.github.io/lk.my-vue-blog.io/
