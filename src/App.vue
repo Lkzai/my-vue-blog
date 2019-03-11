@@ -84,16 +84,15 @@
               if (this.usernameValue === res.data.login) {
                 this.$store.commit('SET_USER', res.data);
                 this.$store.commit('SET_TOKEN', this.tokenValue);
+                this.$tips('绑定成功', 'correct', 2000);
+                done()
+                this.$refs.usernameInputRef.doExit()
+                this.$refs.passwordInputRef.doExit()
+                this.$router.push('/');
               } else {
                 this.$tips('用户名与Token不一致', 'wrong', 2000);
                 done(false)
               }
-            }).then(() => {
-              this.$tips('绑定成功', 'correct', 2000);
-              done()
-              this.$refs.usernameInputRef.doExit()
-              this.$refs.passwordInputRef.doExit()
-              this.$router.push('/');
             }).catch(() => {
               this.$tips('绑定失败', 'wrong', 2000);
               done(false)

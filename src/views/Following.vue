@@ -28,7 +28,6 @@
         this.$tips('正在加载', 'loading');
         this.$ajax.get(`https://api.github.com/users/${this.$store.state.user.login}/following?time=${new Date().getTime()}`).then((res) => {
           this.$store.commit('SET_FOLLOWING', res.data);
-        }).then(() => {
           this.$tips('加载成功', 'correct', 2000);
         }).catch(() => {
           this.$tips('加载失败', 'wrong', 2000);

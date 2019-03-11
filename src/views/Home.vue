@@ -90,7 +90,6 @@
           this.$ajax.delete(`https://api.github.com/gists/${this.currentId}?access_token=${this.$store.state.token}`).then(() => {
             this.$store.commit('DELETE_BLOG', this.currentId)
             this.$store.commit('DELETE_DETAILS', this.currentId)
-          }).then(()=>{
             this.$tips('删除成功', 'correct', 2000);
             done();
           }).catch(() => {

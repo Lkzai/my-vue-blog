@@ -17,7 +17,7 @@
                             介绍
                         </div>
                         <div class="read-detail">
-                            本项目利用 GitHub Gist 作为数据库，搭建了一个纯前端可远程保存数据的单页面应用博客。
+                            本项目利用 GitHub Gist 作为数据库，搭建了一个基于Vue纯前端却可保存数据的移动端个人博客。
                         </div>
                     </div>
                     <div class="read-main-item">
