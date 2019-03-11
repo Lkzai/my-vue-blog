@@ -44,7 +44,7 @@
 
         font-size: 16px;
 
-        color: rgba(0,0,0,.54);
+        color: $theme-color;
 
         transform: translateX(-50%);
         .tips-icon {

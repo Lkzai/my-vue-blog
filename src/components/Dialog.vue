@@ -141,7 +141,7 @@
 
                     @include border(right,rgba(0,0,0,.2));
 
-                    color: rgba(0,0,0,.54);
+                    color: $theme-color;
                 }
                 .dialog-action-confirm {
                     color: rgba(0,0,0);

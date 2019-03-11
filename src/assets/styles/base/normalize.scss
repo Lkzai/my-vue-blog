@@ -397,9 +397,13 @@ input,textarea {
 //锁定滚动
 .body-fix {
   #app {
-    .home,
-    .detail,
-    .read {
+    .home-wrap,
+    .detail-wrap,
+    .read-wrap,
+    .user-wrap,
+    .sociality-wrap,
+    .followers-wrap,
+    .following-wrap {
       overflow: hidden;
     }
   }

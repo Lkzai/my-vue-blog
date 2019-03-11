@@ -90,11 +90,12 @@
           this.$ajax.delete(`https://api.github.com/gists/${this.currentId}?access_token=${this.$store.state.token}`).then(() => {
             this.$store.commit('DELETE_BLOG', this.currentId)
             this.$store.commit('DELETE_DETAILS', this.currentId)
+          }).then(()=>{
             this.$tips('删除成功', 'correct', 2000);
             done();
           }).catch(() => {
             this.$tips('删除失败', 'wrong', 2000);
-            done();
+            done(false);
           })
         } else {
           done();
@@ -144,11 +145,12 @@
           //加个时间戳防止发表博客后刷新页面使用了缓存
         this.$ajax.get(`https://api.github.com/users/${this.$store.state.user.login}/gists?time=${new Date().getTime()}`).then((res) => {
             this.$store.commit('SET_BLOGS', res.data);
-            this.loading = false;
-            this.$tips('加载成功', 'correct', 2000);
+        }).then(()=>{
+          this.$tips('加载成功', 'correct', 2000);
+          this.loading = false;
         }).catch(() => {
-            this.loading = false;
-            this.$tips('加载失败', 'wrong', 2000);
+          this.$tips('加载失败', 'wrong', 2000);
+          this.loading = false;
         })
       },
       beforeEditDialogClose(action, done) {
@@ -171,12 +173,16 @@
                 key: res.data.id,
                 value: res.data
               });
+            }).then(()=>{
               this.$tips('发表成功', 'correct', 2000);
+              done();
               this.$refs.desInputRef.doExit()
               this.$refs.detailTextareaRef.doExit()
               this.$refs.homeWrapRef.scrollTop = 0;
               this.lastScrollTop = 0;
-              done();
+            }).catch(()=>{
+              this.$tips('发表失败', 'wrong', 2000);
+              done(false);
             })
           }
         } else {
@@ -228,7 +234,7 @@
                     margin-left: 20px;
 
                     font-size: 16px;
-                    color: rgba(0,0,0,.54);
+                    color: $theme-color;
                 }
                 .home-tips-icon {
                     width: 68px;
@@ -248,10 +254,16 @@
         width: 46px;
         height: 46px;
 
-        fill: rgba(0, 0, 0, .54);
+        fill: $theme-color;
 
         transform: translate(-50%) scale(1);
         transition: transform $quick-time $function;
+
+        user-select: none;
+
+        &:active {
+            transform: translate(-50%) scale(.7);
+        }
 
         &.btn-add-hide {
             transform: translate(-50%) scale(0);

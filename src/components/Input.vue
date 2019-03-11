@@ -123,7 +123,7 @@
         display: flex;
         align-items: center;
 
-        color: rgba(0, 0, 0, 0.54);
+        color: $theme-color;
 
         font-size: 16px;
 

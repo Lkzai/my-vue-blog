@@ -101,7 +101,7 @@
 
                     border-radius: 50%;
 
-                    box-shadow: 0 0 1px rgba(0,0,0,.54);
+                    box-shadow: 0 0 1px $theme-color;
                 }
                 .user-username {
                     margin-top: 10px;
@@ -134,7 +134,7 @@
                             margin-top: 5px;
                             font-size: 15px;
 
-                            color: rgba(0,0,0,.54);
+                            color: $theme-color;
                         }
                     }
                 }
@@ -171,28 +171,28 @@
                         width: 26px;
                         height: 26px;
 
+                        margin-right: 11px;
                     }
                     .user-main-item-content {
                         position: relative;
                         flex: 1;
                         display: flex;
                         align-items: center;
-                        justify-content: space-between;
 
-                        margin-left: 11px;
                         padding-right: 11px;
 
                         height: 100%;
 
                         @include border(bottom,rgba(0,0,0,.2));
                         .user-main-item-text {
+                            flex: 1;
                             font-size: 15px;
                         }
                         .user-main-item-right {
                             width: 20px;
                             height: 20px;
 
-                            fill: rgba(0,0,0,.54)
+                            fill: $theme-color;
                         }
                     }
                 }

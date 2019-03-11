@@ -28,6 +28,7 @@ export default new Vuex.Store({
     },
     ADD_BLOG(state, value) {
       state.blogs.unshift(value);
+      state.user.public_gists++;
     },
     DELETE_BLOG(state, value) {
       state.blogs.forEach((blog,index)=>{
@@ -44,10 +45,10 @@ export default new Vuex.Store({
       Vue.delete(state.details, value)
     },
     SET_FOLLOWERS(state, value) {
-      state.followers.push(value);
+      state.followers = value;
     },
     SET_FOLLOWING(state, value) {
-      state.following.push(value);
+      state.following = value;
     },
   },
   actions: {}

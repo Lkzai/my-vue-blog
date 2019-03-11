@@ -112,7 +112,7 @@
 
                 padding: 0 0 28px 28px;
 
-                fill: rgba(0,0,0,.54);
+                fill: $theme-color;
             }
         }
 

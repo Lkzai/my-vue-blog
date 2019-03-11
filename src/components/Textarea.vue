@@ -105,7 +105,7 @@
 
             font-size: 16px;
 
-            color: rgba(0, 0, 0, 0.54);
+            color: $theme-color;
 
             transform: translate3d(0,12.5px,0) scale(1);
             transform-origin: top left;
