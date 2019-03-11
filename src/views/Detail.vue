@@ -3,13 +3,13 @@
         <div class="detail-wrap" ref="detailWrapRef">
             <div class="detail" ref="detailRef">
                 <note
-                        v-if="this.$store.state.details[this.$route.query.id]"
+                        v-if="$store.state.details[$route.query.id]"
                         ref="noteRef"
-                        :des="this.$store.state.details[this.$route.query.id].description"
-                        :author="this.$store.state.details[this.$route.query.id].owner.login"
-                        :avatar="this.$store.state.details[this.$route.query.id].owner.avatar_url"
-                        :time="$util.getDateDiff(this.$store.state.details[this.$route.query.id].created_at)"
-                        :detail="this.$store.state.details[this.$route.query.id].files ? this.$store.state.details[this.$route.query.id].files.blog.content : ''"
+                        :des="$store.state.details[$route.query.id].description"
+                        :author="$store.state.details[$route.query.id].owner.login"
+                        :avatar="$store.state.details[$route.query.id].owner.avatar_url"
+                        :time="$util.getDateDiff($store.state.details[$route.query.id].created_at)"
+                        :detail="$store.state.details[$route.query.id].files ? $store.state.details[$route.query.id].files.blog.content : ''"
                 ></note>
             </div>
         </div>

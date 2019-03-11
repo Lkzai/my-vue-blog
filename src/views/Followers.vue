@@ -2,7 +2,7 @@
     <div class="followers-wrap" ref="followersWrapRef">
         <div class="followers">
             <a :href="`https://github.com/${follower.login}`" class="followers-item"
-               v-for="follower in this.$store.state.followers">
+               v-for="follower in $store.state.followers">
                 <div class="follower-item-left">
                     <img class="followers-avatar" :src="follower.avatar_url"/>
                 </div>

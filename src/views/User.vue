@@ -3,19 +3,19 @@
         <div class="user-wrap">
             <div class="user">
                 <header class="user-header">
-                    <img class="user-avatar" :src="this.$store.state.user.avatar_url">
-                    <div class="user-username">{{this.$store.state.user.login}}</div>
+                    <img class="user-avatar" :src="$store.state.user.avatar_url">
+                    <div class="user-username">{{$store.state.user.login}}</div>
                     <div class="user-extra">
                         <router-link to="/" class="user-extra-item">
-                            <div class="user-extra-item-top">{{this.$store.state.user.public_gists}}</div>
+                            <div class="user-extra-item-top">{{$store.state.user.public_gists}}</div>
                             <div class="user-extra-item-bottom">博客</div>
                         </router-link>
                         <router-link to="/sociality" class="user-extra-item">
-                            <div class="user-extra-item-top">{{this.$store.state.user.followers}}</div>
+                            <div class="user-extra-item-top">{{$store.state.user.followers}}</div>
                             <div class="user-extra-item-bottom">粉丝</div>
                         </router-link>
                         <router-link to="/sociality/following" class="user-extra-item">
-                            <div class="user-extra-item-top">{{this.$store.state.user.following}}</div>
+                            <div class="user-extra-item-top">{{$store.state.user.following}}</div>
                             <div class="user-extra-item-bottom">关注</div>
                         </router-link>
                     </div>

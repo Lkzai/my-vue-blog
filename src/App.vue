@@ -7,17 +7,17 @@
                 </svg>
             </router-link>
             <div class="header-right">
-                <svg @click="loginDialogShow = true" v-if="JSON.stringify(this.$store.state.user)==='{}'" width="100%"
+                <svg @click="loginDialogShow = true" v-if="JSON.stringify($store.state.user)==='{}'" width="100%"
                      height="100%"
                      fill="currentColor">
                     <use xlink:href="#icon-login"></use>
                 </svg>
-                <svg v-else-if="this.$route.name === 'user'" @click="logoutDialogShow = true" width="100%" height="100%"
+                <svg v-else-if="$route.name === 'user'" @click="logoutDialogShow = true" width="100%" height="100%"
                      fill="rgba(0,0,0,.54)">
                     <use xlink:href="#icon-logout"></use>
                 </svg>
                 <router-link class="header-avatar" v-else to="/user">
-                    <img :src="this.$store.state.user.avatar_url" alt="" width="100%" height="100%">
+                    <img :src="$store.state.user.avatar_url" alt="" width="100%" height="100%">
                 </router-link>
             </div>
         </header>

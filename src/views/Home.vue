@@ -3,14 +3,14 @@
         <div class="home-wrap" ref="homeWrapRef" @scroll="onScroll">
             <div class="home" ref="homeRef">
                 <transition name="fade">
-                    <div class="home-tips" v-if="!loading && this.$store.state.blogs.length === 0">
+                    <div class="home-tips" v-if="!loading && $store.state.blogs.length === 0">
                         <p class="home-tips-text">点击发表博客</p>
                         <svg class="home-tips-icon" slot="header">
                             <use xlink:href="#icon-arraw"></use>
                         </svg>
                     </div>
                 </transition>
-                <card v-for="blog in this.$store.state.blogs"
+                <card v-for="blog in $store.state.blogs"
                       :key="blog.id"
                       :avatar="blog.owner.avatar_url"
                       :author="blog.owner.login"

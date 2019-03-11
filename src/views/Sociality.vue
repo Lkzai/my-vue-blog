@@ -3,8 +3,8 @@
         <div class="sociality-wrap">
             <div class="sociality">
                 <nav class="sociality-nav">
-                    <router-link class="sociality-nav-item" to="/sociality" :class="{'sociality-nav-item-active': this.$route.name == 'followers'}">粉丝 {{this.$store.state.user.followers}}</router-link>
-                    <router-link class="sociality-nav-item" to="/sociality/following" :class="{'sociality-nav-item-active': this.$route.name == 'following'}">关注 {{this.$store.state.user.following}}</router-link>
+                    <router-link class="sociality-nav-item" to="/sociality" :class="{'sociality-nav-item-active': $route.name == 'followers'}">粉丝 {{$store.state.user.followers}}</router-link>
+                    <router-link class="sociality-nav-item" to="/sociality/following" :class="{'sociality-nav-item-active': $route.name == 'following'}">关注 {{$store.state.user.following}}</router-link>
                 </nav>
                 <keep-alive>
                     <router-view/>
