@@ -14,7 +14,7 @@
                       :key="blog.id"
                       :avatar="blog.owner.avatar_url"
                       :author="blog.owner.login"
-                      :time="blog.created_at"
+                      :time="$util.getDateDiff(blog.created_at)"
                       :des="blog.description"
                       :comments="blog.comments"
                       @on-main-click="clickCardMain(blog)"

@@ -19,12 +19,14 @@ export default new Vuex.Store({
     },
     SET_USER(state, value) {
       state.user = value;
-    },
-    SET_BLOGS(state, value) {
-      state.blogs = value;
+      sessionStorage.setItem("user", JSON.stringify(value));
     },
     SET_TOKEN(state, value) {
       state.token = value;
+      sessionStorage.setItem("token", value);
+    },
+    SET_BLOGS(state, value) {
+      state.blogs = value;
     },
     ADD_BLOG(state, value) {
       state.blogs.unshift(value);
@@ -50,6 +52,5 @@ export default new Vuex.Store({
     SET_FOLLOWING(state, value) {
       state.following = value;
     },
-  },
-  actions: {}
+  }
 })

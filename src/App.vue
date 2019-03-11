@@ -70,8 +70,7 @@
     methods: {
       clickLogoutDialogConfirm() {
         this.$store.commit('SET_USER', {})
-        sessionStorage.removeItem("user");
-        sessionStorage.removeItem("token");
+        this.$store.commit('SET_TOKEN', '')
         this.$tips('注销成功', 'correct', 2000);
         this.$router.push('/read')
       },
@@ -85,8 +84,6 @@
               if (this.usernameValue === res.data.login) {
                 this.$store.commit('SET_USER', res.data);
                 this.$store.commit('SET_TOKEN', this.tokenValue);
-                sessionStorage.setItem("user", JSON.stringify(res.data));
-                sessionStorage.setItem("token", this.tokenValue);
               } else {
                 this.$tips('用户名与Token不一致', 'wrong', 2000);
                 done(false)
@@ -169,7 +166,5 @@
 
             fill: $theme-color;
         }
-
-
     }
 </style>

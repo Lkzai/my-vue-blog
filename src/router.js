@@ -53,7 +53,7 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.name !== 'read') {
-    if (sessionStorage.getItem("token")) {
+    if (sessionStorage.getItem("token") && sessionStorage.getItem("token") !== '') {
       next();
     } else {
       next('/read')

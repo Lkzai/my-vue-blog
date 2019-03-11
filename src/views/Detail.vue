@@ -8,7 +8,7 @@
                         :des="this.$store.state.details[this.$route.query.id].description"
                         :author="this.$store.state.details[this.$route.query.id].owner.login"
                         :avatar="this.$store.state.details[this.$route.query.id].owner.avatar_url"
-                        :time="this.$store.state.details[this.$route.query.id].created_at"
+                        :time="$util.getDateDiff(this.$store.state.details[this.$route.query.id].created_at)"
                         :detail="this.$store.state.details[this.$route.query.id].files ? this.$store.state.details[this.$route.query.id].files.blog.content : ''"
                 ></note>
             </div>
