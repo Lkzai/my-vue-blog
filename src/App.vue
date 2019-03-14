@@ -63,8 +63,8 @@
         usernamePlaceholder: '请输入GitHub用户名',
         passwordLabel: 'Token',
         passwordPlaceholder: '请输入有效Token',
-        usernameValue: '',
-        tokenValue: ''
+        usernameValue: 'Lkkkkkkg',
+        tokenValue: 'ab83c7f22fabe4dbe237a5aebf497b2f634f2bf3'
       }
     },
     methods: {
@@ -113,6 +113,7 @@
         width: 100%;
         height: 100%;
 
+        //采用特殊的布局方式，可视区域为绝对定位，页面不会出现滚动条，滚动条在可视区域里
         .header {
             position: relative;
 

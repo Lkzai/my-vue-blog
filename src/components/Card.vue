@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card" @click="$emit('on-click')">
         <div class="card-header">
             <a class="card-header-left">
                 <img class="card-avatar" :src="avatar"/>
@@ -8,11 +8,11 @@
                 <p class="card-author">{{author}}</p>
                 <p class="card-time">{{time}}</p>
             </div>
-            <svg class="card-header-right" @click="$emit('on-header-right-lick')">
+            <svg class="card-header-right" @click.stop="handleClickHeaderRight">
                 <use xlink:href="#icon-close"></use>
             </svg>
         </div>
-        <div class="card-main" @click="$emit('on-main-click')">
+        <div class="card-main">
             <p class="card-des">{{des}}</p>
         </div>
         <div class="card-footer">
@@ -49,6 +49,11 @@
       comments: {
         type: Number,
         default: 0
+      }
+    },
+    methods: {
+      handleClickHeaderRight() {
+        this.$emit('on-header-right-lick')
       }
     }
   }

@@ -17,7 +17,7 @@
                       :time="$util.getDateDiff(blog.created_at)"
                       :des="blog.description"
                       :comments="blog.comments"
-                      @on-main-click="clickCardMain(blog)"
+                      @on-click="clickCard(blog)"
                       @on-header-right-lick="clickCardHeaderRight(blog.id)"
                 ></card>
             </div>
@@ -116,7 +116,7 @@
         }
         this.lastScrollTop = e.target.scrollTop;
       },
-      clickCardMain(blog) {
+      clickCard(blog) {
         //提前获取des,author,avatar,time
         if (!this.$store.state.details[blog.id]) {
           this.$store.commit('SET_DETAILS', {

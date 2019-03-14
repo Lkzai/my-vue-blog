@@ -84,6 +84,12 @@
 
 <style lang="scss" scoped>
     .dialog-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
         .dialog {
             position: absolute;
             top: 50%;
@@ -163,26 +169,18 @@
         }
 
         .mask {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 3;
+            width: 100%;
+            height: 100%;
 
             background-color: rgba(255, 255, 255, .4);
         }
     }
     .fade-enter-active, .fade-leave-active {
-        transition: opacity $quick-time $function;
-        .dialog {
-            transition: transform $quick-time $function;
-        }
+        transition: opacity $quick-time $function, transform $quick-time $function;
+
     }
     .fade-enter, .fade-leave-to {
         opacity: 0;
-        .dialog {
-            transform: translate(-50%,-50%) scale(1.185);
-        }
+        transform: scale(1.185);
     }
 </style>
